@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">APA</string>
+    <string name="app_fname">Academic Performance Assistant</string>
+    <string name="menu_subj">Subjects</string>
+    <string name="menu_ins">Instruction</string>
+    <string name="menu_abt">About</string>
+    <string name="menu_set">Settings</string>
+    <string name="menu_lgt">Log out</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_login">Login</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_subjects">Subjects</string>
+    <string name="title_activity_subject_view">SubjectView</string>
+
+    <string-array name="name">
+        <item>IT 126</item>
+        <item>Math 48</item>
+        <item>PE 13</item>
+    </string-array>
+    <string-array name="desc">
+        <item>Data Structures and Algorithm II</item>
+        <item>Discrete Mathematics</item>
+        <item>Fundamentals in Games and Sports</item>
+    </string-array>
+
+    <string name="title_activity_grading_system">GradingSystem</string>
+    <string name="title_activity_subject_items">SubjectItems</string>
+
+</resources>
