@@ -53,7 +53,6 @@ public class Register extends ActionBarActivity {
     }
 
     public void submitClick(View v){
-
         Toast t = Toast.makeText(this, "Successfully registered!", Toast.LENGTH_SHORT);
         t.show();
         Intent intent = new Intent(Register.this,Login.class);

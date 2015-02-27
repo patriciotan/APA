@@ -64,6 +64,11 @@ public class Subjects extends ListActivity {
         });
     }
 
+    public void newSubjClick(View v){
+        Intent intent = new Intent(this,NewSubject.class);
+        startActivity(intent);
+    }
+
 }
 
 

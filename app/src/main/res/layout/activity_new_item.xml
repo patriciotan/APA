@@ -84,32 +84,111 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/subjects"
+                android:id="@+id/New"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:text="Subjects"
+                android:text="Add new Item"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <ListView
-                android:id="@+id/subjectsList"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_below="@+id/subjects" >
-            </ListView>
-
-            <Button
-                android:id="@+id/newSubject"
-                android:layout_marginTop="50dp"
-                android:layout_width="250dp"
+            <LinearLayout
+                android:id="@+id/Checkb"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add new Subject"
+                android:layout_below="@id/New">
+
+                <CheckBox
+                    android:id="@+id/Seatwork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seatwork"/>
+
+                <CheckBox
+                    android:id="@+id/Quiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:text="Quiz"/>
+
+                <CheckBox
+                    android:id="@+id/Ass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:text="Assignment"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Raw"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Raw Score"
+                android:layout_below="@id/Checkb"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/rawScore"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/form_height"
+                android:hint="Raw Score"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/form_textSize"
                 android:background="@drawable/green_button"
-                android:layout_below="@id/subjectsList"
-                android:clickable="true"
+                android:layout_below="@id/Raw"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/Total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Score"
+                android:textColor="@color/black"
+                android:layout_below="@id/rawScore"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/totalScore"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/form_height"
+                android:hint="Total Score"
+                android:inputType="textPassword"
+                android:textSize="@dimen/form_textSize"
+                android:background="@drawable/green_button"
+                android:layout_below="@id/Total"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/totalScore"
                 android:layout_centerHorizontal="true"
-                android:onClick="newSubjClick"/>
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:background="@drawable/log_in"
+                    android:clickable="true"
+                    android:onClick="saveNewClick"/>
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:background="@drawable/register"
+                    android:clickable="true"
+                    android:onClick="cancelNewClick"/>
+
+            </LinearLayout>
 
         </RelativeLayout>
 

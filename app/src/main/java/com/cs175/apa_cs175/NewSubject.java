@@ -1,37 +1,33 @@
 package com.cs175.apa_cs175;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class Login extends ActionBarActivity {
+public class NewSubject extends ActionBarActivity {
 
     android.support.v7.app.ActionBar actionBar;
-    EditText user, pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         actionBar = getSupportActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(36, 99, 46)));
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_new_subject);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_new_subject, menu);
         return true;
     }
 
@@ -50,24 +46,15 @@ public class Login extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void loginClick(View v){
-
-//        Editable username = user.getText();
-//        Editable password = pass.getText();
-//		Toast.makeText(this, username, Toast.LENGTH_SHORT);
-//        if(username.toString().equals("asdf"))
-//        {
-            Intent intent = new Intent(Login.this,Home.class);
-            startActivity(intent);
-//        }else
-//        {
-//            Toast t = Toast.makeText(this, "Incorrect username/password!", Toast.LENGTH_SHORT);
-//            t.show();
-//        }
+    public void saveNewClick(View v){
+        Toast t = Toast.makeText(this, "Successfully added subject!", Toast.LENGTH_SHORT);
+        t.show();
+        Intent intent = new Intent(this,Subjects.class);
+        startActivity(intent);
     }
 
-    public void registerClick(View v){
-        Intent intent = new Intent(Login.this,Register.class);
+    public void cancelNewClick(View v){
+        Intent intent = new Intent(this,Subjects.class);
         startActivity(intent);
     }
 }

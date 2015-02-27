@@ -1,16 +1,24 @@
 package com.cs175.apa_cs175;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class SubjectItems extends ActionBarActivity {
 
+    android.support.v7.app.ActionBar actionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(36, 99, 46)));
         setContentView(R.layout.activity_subject_items);
     }
 
@@ -35,5 +43,10 @@ public class SubjectItems extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void newItemClick(View v){
+        Intent intent = new Intent(this,NewItem.class);
+        startActivity(intent);
     }
 }
